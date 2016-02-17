@@ -11,7 +11,7 @@ class App extends React.Component {
 		super(props)
 		this.state = {num: 0}
 	}
-asd
+
 	componentDidMount() {
 		this.interval = setInterval(() => {
 			this.setState({num: this.state.num+1})
@@ -23,7 +23,7 @@ asd
 	}
 
 	render() {
-		return <h1>Sip {this.state.num + 100}</h1>
+		return <h1>Sip {this.asstate.num + 100}</h1>
 	}
 }
 
