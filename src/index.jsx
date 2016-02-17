@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 
-// const App = () => {
-// 	return <div>_4444555</div>
-// }
+const Sub = (props) => {
+	return <h4>---------------- {props.texto}</h4>
+} 
 
 class App extends React.Component {
 	constructor(props) {
@@ -23,7 +23,12 @@ class App extends React.Component {
 	}
 
 	render() {
-		return <h1>Sip {this.asstate.num + 100}</h1>
+		return <div>
+			<h1>Cachate</h1>
+			<Sub texto={this.state.num}/>
+
+		</div>
+		// return <h1>Sip {this.state.num + 100}</h1>
 	}
 }
 
