@@ -26,6 +26,14 @@ class App extends React.Component {
 		return <div>
 			<h1>Cachate</h1>
 			<Sub texto={this.state.num}/>
+			<b>If your trying to use redux store, there is a trick to be able to hotload its reducers, like <a href='https://github.com/reactjs/redux/blob/master/examples/todomvc/store/configureStore.js'>this</a></b>
+			<pre>
+				  if (module.hot)
+				    module.hot.accept('./modules/reducer', () => 
+				      store.replaceReducer(require('./modules/reducer'));
+				    );
+				  
+			</pre>
 
 		</div>
 		// return <h1>Sip {this.state.num + 100}</h1>
@@ -36,3 +44,6 @@ ReactDOM.render(
 	<App/>,
 	document.getElementById('root')
 )
+
+
+
